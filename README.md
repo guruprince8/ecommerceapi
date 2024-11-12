@@ -10,6 +10,9 @@ Use schema_creation.sql file avaiable inside schema directory to create new sche
 <h2>Load Sample Data</h2>
 Use CSV files under /sampledata directory to load sample data 
 
+<h2>Enabling HTTPS</h2>
+Certs folder consists of sample certicate and private key which are used to enable https. It is recomeeded to regenerate those as per the domain or ip address.
+
 <h2>Run Application </h2>
 Use npm run start
 
