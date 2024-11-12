@@ -1,27 +1,22 @@
-
 const express = require("express");
 const https = require('https')
 const fs = require('fs')
 const app = express();
+var log4js = require("log4js");
+require('dotenv').config();
+const appconfig = require('./config');
+const certOptions = require("./certs/loadCertificate");
 
-let key = fs.readFileSync('certs/tomcat.key');
-let cert = fs.readFileSync('certs/tomcat.crt');
-const port = 3000;
 
-let options = {
-    key:key,
-    cert:cert
-}
+// application routes
+const defaultRouter = require('./routes/default');
+const authenticateRouter = require('./routes/authenticate');
+const databaseRouter = require('./routes/database');
+app.use("/authenticate",authenticateRouter);
+app.use("/db",databaseRouter);
+app.use("/",defaultRouter);
 
-app.get("/",(req,res)=> {
-    res.send("hello world");
+var server = https.createServer(certOptions.options, app)
+server.listen(process.env.PORT, () => {
+    console.log("server starting on port : " + process.env.PORT)
 });
-
-app.get("/authenticate",(req,res)=> {
-    res.send("authenticate");
-});
-
-var server = https.createServer(options,app)
-server.listen(port, () => {
-    console.log("server starting on port : " + port)
-  });
