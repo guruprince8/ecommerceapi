@@ -16,7 +16,9 @@ Certs folder consists of sample certicate and private key which are used to enab
 Use either <code>keytool</code> or <code>openssl</code> to generate new certificate and private key.
 
 <h2>Run Application </h2>
-Use npm run start
+Use the following commands in sequence to launch application
+<li><code>npm install</code></li>
+<li><code>npm run start<code></li>
 
  <h2>Access Application </h2>
 Use https://127.0.0.1:3000/
