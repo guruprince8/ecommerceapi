@@ -13,6 +13,8 @@ Use CSV files under /sampledata directory to load sample data
 <h2>Enabling HTTPS</h2>
 Certs folder consists of sample certicate and private key which are used to enable https. It is recomeeded to regenerate those as per the domain or ip address.
 
+Use either <code>keytool</code> or <code>openssl</code> to generate new certificate and private key.
+
 <h2>Run Application </h2>
 Use npm run start
 
