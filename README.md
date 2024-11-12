@@ -18,7 +18,7 @@ Use either <code>keytool</code> or <code>openssl</code> to generate new certific
 <h2>Run Application </h2>
 Use the following commands in sequence to launch application
 <li><code>npm install</code></li>
-<li><code>npm run start<code></li>
+<li><code>npm run start</code></li>
 
  <h2>Access Application </h2>
 Use https://127.0.0.1:3000/
