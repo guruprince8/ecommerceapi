@@ -5,7 +5,7 @@ Node application designed and developed to host micro services.
 Ideas is to use Express and Express Router to develop different sets of micro services by different business lines. 
 
  <h2>Prequisites to launch application</h2>
-  <li>Install Postgres 15 - please refer link <a href="https://www.postgresql.org/download/">Postgres Installation </a></li>
+  <li>Install Postgres 15 - please refer link <a href="https://www.postgresql.org/download/" target="_blank">Postgres Installation </a></li>
   
 <h2>Schema Setup</h2>
 Use schema_creation.sql file avaiable inside schema directory to create new schema & tables
