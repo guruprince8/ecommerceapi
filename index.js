@@ -8,8 +8,8 @@ const certOptions = require("./certs/loadCertificate");
 
 // application routes
 const defaultRouter = require('./routes/default');
-const authenticateRouter = require('./routes/authenticate');
-const databaseRouter = require('./routes/database');
+const authenticateRouter = require('./routes/authenticate/authenticate');
+const databaseRouter = require('./routes/database/database');
 const currencyExchangeRouter = require('./routes/currency/currencyexchange');
 app.use("/authenticate", authenticateRouter);
 app.use("/db", databaseRouter);

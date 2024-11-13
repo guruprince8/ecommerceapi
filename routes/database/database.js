@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const database = express.Router();
 
-const dbconnection = require('../database/dbconnection');
+const dbconnection = require('../../database/dbconnection');
 dbconnection.testDBConnection();
 
 
