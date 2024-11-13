@@ -10,8 +10,10 @@ const certOptions = require("./certs/loadCertificate");
 const defaultRouter = require('./routes/default');
 const authenticateRouter = require('./routes/authenticate');
 const databaseRouter = require('./routes/database');
+const currencyExchangeRouter = require('./routes/currency/currencyexchange');
 app.use("/authenticate", authenticateRouter);
 app.use("/db", databaseRouter);
+app.use("/currency", currencyExchangeRouter);
 app.use("/", defaultRouter);
 
 // start https server on PORT mentioned in .env file
