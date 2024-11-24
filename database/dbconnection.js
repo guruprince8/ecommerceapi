@@ -28,8 +28,8 @@ async function testDBConnection() {
         await client.connect();
         console.log('connected to database')
     } catch (err) {
-        console.log('error connecting to database', err)
-        exit(1);
+        console.log('error connecting to database', err);
+        // process.exit(1);
     }
 
 }
